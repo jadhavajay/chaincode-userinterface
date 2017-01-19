@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:9000/#/logout -->
+<html data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Bilateral</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--The FontAwesome version is locked at 4.6.3 in the package.json file to keep this from breaking.-->
+  <link href="./Bilateral_files/bootstrap.min.css" rel="stylesheet">
+  <link href="./Bilateral_files/font-awesome.css" rel="stylesheet">
+  <link href="./Bilateral_files/animate.css" rel="stylesheet">
+  <link href="./Bilateral_files/inspinia-style.css" rel="stylesheet">
+  <link href="./Bilateral_files/styles.css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="./Bilateral_files/app-bundle.js"></script><style type="text/css">.aurelia-hide { display:none !important; }</style></head>
+
+<body aurelia-app="main" style="background: #ffffff" class=" pace-running pace-running" cz-shortcut-listen="true">
+  <div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+      <div>
+        <h3 class="logo-name">AyanWorks</h3>
+      </div>
+      <h3>A Decentralized Clearning Network</h3>
+      <p>Next-generation post-trade services for OTC derivative swaps using blockchain technology
+      </p>
+      <p>Login in. To see it in action.</p>
+      <form class="m-t" role="form" action="http://localhost:9000/index.html">
+        <div class="form-group">
+          <input type="email" value.bind="email" class="form-control au-target" placeholder="Username" required="" au-target-id="1">
+        </div>
+        <div class="form-group">
+          <input type="password" value.bind="password" class="form-control au-target" placeholder="Password" required="" au-target-id="2">
+        </div>
+        <button type="submit" click.delegate="login()" class="btn btn-primary block full-width m-b au-target" au-target-id="3">Login</button>
+        <a href="http://localhost:9000/#/"><small>Forgot password?</small></a>
+        <p class="text-muted text-center"><small>Do not have an account?</small></p>
+        <a href="http://localhost:9000/#/" class="btn btn-sm btn-white btn-block">Create an account</a>
+      </form>
+    </div>
+  </div>
+</body></html>

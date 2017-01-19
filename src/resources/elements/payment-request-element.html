@@ -1,0 +1,11 @@
+<template>
+  <require from="./payment-element"></require>
+
+  <span show.bind="paymentRequest"
+        style="${paymentRequest.satisfied ? 'color:green' : (paymentRequest.late ? 'color:red' : 'color:blue')}">
+    ${paymentRequest.value} due ${paymentRequest.dueDate}
+  </span>
+  <ul>
+    <li repeat.for="p of paymentRequest.payments"><payment data.bind="p"/></li>
+  </ul>
+</template>

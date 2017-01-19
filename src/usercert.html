@@ -1,0 +1,39 @@
+<template>
+  <require from="./resources/elements/trade-element"></require>
+  <require from="./resources/elements/payment-request-element"></require>
+  <section class="au-animate">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div style="color: red">${err}</div>
+                <div class="form-group">
+                  <label for="name" cklass="control-label col-sm-2">User Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="User Name" required value.bind="user.user.name">
+                </div>
+              <button class="btn btn-default" type="button" click.delegate="getUserDetails()">Retrieve User Certificates</button>
+              <!--<button class="btn btn-default" type="button" click.delegate="register()">Claim User Certificates</button>-->
+            </div>
+          </div>
+          <div if.bind="user" class="panel panel-default">
+            <div class="panel-heading">Claim Certificates</div>
+            <div class="panel-body">
+              <form submit.delegate="deploy()">
+                <div class="form-group">
+                  <label for="certName">Certificate Name</label>
+                  <input type="text" class="form-control" id="certName" placeholder="Certification" required value.bind="user.user.certName">
+                </div>
+                <div class="form-group">
+                  <label for="validToDate">Validity Date</label>
+                  <input type="date" class="form-control" id="validToDate" required value.bind="user.user.validToDate">
+                </div>
+                <button class="btn btn-default" type="submit" click.delegate="deploy()">Register Certificates</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</template>

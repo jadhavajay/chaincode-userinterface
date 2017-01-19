@@ -1,0 +1,37 @@
+<template bindable="router">
+  <!--<require from="./resources/elements/next-day"></require>-->
+
+  <nav class="navbar-collapse collapse" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img src="img/AWTS.png" width="25px" alt="Logo">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navigation">
+      <ul class="nav navbar-top-links navbar-right">
+        <li>
+          <img src="img/blockchain-dev.png" width="5px" alt="Logo">
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-static-top" role="navigation">
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : 'dropdown'}">
+          <a aria-expanded="${row.isActive}" data-target="#navbar" href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-top-links navbar-right">
+        <li>
+          <next-day></next-day>
+        </li>
+        
+        <li>
+          <a href="/index.html">
+            <i class="fa fa-sign-out"></i>Log out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</template>

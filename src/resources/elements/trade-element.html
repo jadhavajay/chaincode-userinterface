@@ -1,0 +1,32 @@
+<template>
+  <require from="./payment-element"></require>
+
+  <dl show.bind="trade">
+    <dt>matched</dt>
+    <dd>${trade.matched}</dd>
+    <dt>party</dt>
+    <dd>${trade.party}</dd>
+    <dt>counterparty</dt>
+    <dd>${trade.trade.info.counterparty}</dd>
+    <dt>trade date</dt>
+    <dd>${trade.trade.info.tradeDate}</dd>
+    <dt>settlement date</dt>
+    <dd>${trade.trade.info.settlementDate}</dd>
+    <dt>side</dt>
+    <dd>${trade.trade.product.buySellProtection}</dd>
+    <dt>start date</dt>
+    <dd>${trade.trade.product.startDate}</dd>
+    <dt>end date</dt>
+    <dd>${trade.trade.product.endDate}</dd>
+    <dt>reference entity</dt>
+    <dd>${trade.trade.product.referenceInformation.referenceEntityId}</dd>
+    <dt>notional</dt>
+    <dd>${trade.trade.product.feeLeg.periodicPayments.notional}</dd>
+    <dt>coupon</dt>
+    <dd>${trade.trade.product.feeLeg.periodicPayments.coupon}</dd>
+    <dt>upfront fee</dt>
+    <dd>
+      <payment data.bind="trade.trade.product.feeLeg.upfrontFee"></payment>
+    </dd>
+  </dl>
+</template>

@@ -1,0 +1,29 @@
+<template>
+  <!--<require from="bootstrap/css/bootstrap.css"></require>-->
+  <require from="nav-bar.html"></require>
+  <!--<require from="./network/network-activity.html"></require>-->
+  <require from="./resources/elements/footer-element"></require>
+  <div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+      <div class="row border-bottom white-bg">
+        <!-- nav-bar -->
+        <nav-bar router.bind="router"></nav-bar>
+      </div>
+      <!-- wrapper-content -->
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- Network Activity -->
+          <!--<network-activity></network-activity>-->
+        </div>
+        <div class="col-lg-9">
+          <div class="wrapper wrapper-content">
+            <!-- Host Router here -->
+            <router-view></router-view>
+          </div>
+        </div>
+      </div>
+      <!-- footer-element -->
+      <footer></footer>
+    </div>
+  </div>
+</template>
